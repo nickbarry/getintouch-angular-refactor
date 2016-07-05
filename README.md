@@ -3,13 +3,13 @@
 
 ## Basic Requirements
 - [ ] Use iterative development (go straight to something that demos your idea)
-   - Create the ability to add new contacts, and update contacts' "last contacted" property.
-   - Make sure the client/server are sending data between each other.
-   - Connect to a database
+   - Create the ability to add new contacts
    - Deploy to Heroku.
    - Optional: Create ability to save notes for each contact
    - Optional: Connect the server to Facebook, Gmail, and LinkedIn third party APIs.
    - Optional: Build the ability to save user "stories" (updates).
+   - Make sure the client/server are sending data between each other.
+   - Connect to a database
 - [ ] Prepare for pitch @ demo on Tuesday
 
 

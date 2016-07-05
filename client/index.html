@@ -10,7 +10,7 @@
 <div id="main" ng-controller="ContactsController">
   <h1>Get In Touch</h1>
   <div id="contacts--list">
-    <div class="contact--card" ng-repeat="contact in contacts">
+    <div class="contact--card" ng-repeat="contact in contacts | filter:isOverdue">
       <h3>
         {{ contact.name }}
         <button class="contact--btn-contacted" ng-click="markAsContacted(contact)">Just contacted!</button>

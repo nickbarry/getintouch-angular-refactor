@@ -34,8 +34,13 @@ angular.module('getintouch', [])
   ];
 
   $scope.markAsContacted = function(contact){
-    contact.lastContacted = new moment(); // Record today's contact
+    contact.lastContacted = new moment().hours(0).minutes(0).seconds(0).milliseconds(0); // Record today's contact
     contact.lastContactedLabel = contact.lastContacted.format('MMM D, YYYY');
-    contact.contactNext.add(contact.contactFrequency, 'days'); // update .contactNext property
-  }
+    contact.contactNext = moment(contact.lastContacted).add(contact.contactFrequency, 'days'); // update .contactNext property
+  };
+
+  $scope.isOverdue = function(contact){
+    var today = new moment().hours(0).minutes(0).seconds(0).milliseconds(0);
+    return contact.contactNext.isSameOrBefore(today);
+  };
 })
