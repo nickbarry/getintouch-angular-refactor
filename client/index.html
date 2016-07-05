@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Get In Touch</title>
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
 <body>
 <h1>Get In Touch</h1>
@@ -10,7 +11,12 @@
 <div id="main" ng-controller="RemindersController">
   <div id="reminders">
     <div class="reminder" ng-repeat="reminder in reminders">
-      {{ reminder }}
+      <h3>{{ reminder.name }}</h3>
+      <p>
+        Contacted {{ reminder.lastContacted }}
+        <br>
+        Contact every {{ reminder.contactFrequency }} days
+      </p>
     </div>
   </div>
 </div>
