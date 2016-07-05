@@ -3,22 +3,22 @@ angular.module('getintouch', [])
   $scope.reminders = [
     {
       name: 'Elyse Green',
-      lastContacted: 'today',
+      lastContacted: new Date(),
       contactFrequency: 1
     },
     {
       name: 'Chris Brenton',
-      lastContacted: 'last week',
+      lastContacted: new Date("2016-06-30"),
       contactFrequency: 14
     },
     {
       name: 'Rob Hines',
-      lastContacted: 'February, 2016',
+      lastContacted: new Date("2016-02-20"),
       contactFrequency: 180
     },
     {
       name: 'Nick Winter',
-      lastContacted: 'October, 2015',
+      lastContacted: new Date("2015-10-30"),
       contactFrequency: 365
     }
   ];
