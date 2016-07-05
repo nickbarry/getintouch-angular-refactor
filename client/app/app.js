@@ -5,8 +5,8 @@ angular.module('getintouch', [])
   $scope.contacts = [
     {
       name: 'Elyse Green',
-      lastContacted: new moment(),
-      lastContactedLabel: new moment().format('MMM D, YYYY'),
+      lastContacted: new moment().hours(0).minutes(0).seconds(0).milliseconds(0),
+      lastContactedLabel: new moment().hours(0).minutes(0).seconds(0).milliseconds(0).format('MMM D, YYYY'),
       contactFrequency: 1,
       contactNext: new moment("2016-07-06")
     },
@@ -42,5 +42,42 @@ angular.module('getintouch', [])
   $scope.isOverdue = function(contact){
     var today = new moment().hours(0).minutes(0).seconds(0).milliseconds(0);
     return contact.contactNext.isSameOrBefore(today);
+  };
+
+  var newContactDefaults = {
+    name: '',
+    contactFrequency: '',
+    lastContacted: ''
+  };
+  $scope.newContact = Object.assign({},newContactDefaults);
+  $scope.adding = false;
+  $scope.cancelNew = function(){
+    $scope.adding = false;
+    Object.assign($scope.newContact,newContactDefaults);
+  };
+  $scope.createNew = function(){
+    var newC = $scope.newContact;
+    if(newC.name === ''){
+      // TODO: Create some error conditions
+      return;
+    }
+
+    newC.contactFrequency = newC.contactFrequency || '180';
+
+    //var lastContacted = newC.lastContacted.split('/');
+    newC.lastContacted = newC.lastContacted ?
+      new moment(newC.lastContacted) :
+      new moment().hours(0).minutes(0).seconds(0).milliseconds(0).subtract(+newC.contactFrequency,'days');
+
+    $scope.contacts.push({
+      name:               newC.name,
+      lastContacted:      newC.lastContacted,
+      lastContactedLabel: newC.lastContacted.format('MMM D, YYYY'),
+      contactFrequency:   newC.contactFrequency,
+      contactNext:        newC.lastContacted.add(+newC.contactFrequency,'days')
+    });
+
+    Object.assign(newC, newContactDefaults);
+    $scope.adding = false;
   };
 })

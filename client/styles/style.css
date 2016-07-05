@@ -10,3 +10,16 @@
 .contact--btn-contacted{
   float: right;
 }
+
+#contact--btn-add-new{
+  padding: 10px 0;
+}
+
+/*#contact--btn-add-new{*/
+  /*text-height: 2em;*/
+/*}*/
+
+input{
+  padding: 5px 0;
+  margin: 5px 0;
+}

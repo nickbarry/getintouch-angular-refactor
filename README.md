@@ -22,5 +22,3 @@
 
 - [ ] Storage - if your app persists data, use a tool like Parse or Firebase. 
 - [ ] Use Liberator, then deploy your app so the whole world can see!
-- [ ] If applicable, use an MVC Framework - Make your app production grade with a full-on MVC. 
-
