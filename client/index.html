@@ -6,22 +6,26 @@
   <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
 <body>
-<h1>Get In Touch</h1>
 
-<div id="main" ng-controller="RemindersController">
-  <div id="reminders">
-    <div class="reminder" ng-repeat="reminder in reminders">
-      <h3>{{ reminder.name }}</h3>
+<div id="main" ng-controller="ContactsController">
+  <h1>Get In Touch</h1>
+  <div id="contacts--list">
+    <div class="contact--card" ng-repeat="contact in contacts">
+      <h3>
+        {{ contact.name }}
+        <button class="contact--btn-contacted" ng-click="markAsContacted(contact)">Just contacted!</button>
+      </h3>
       <p>
-        Contacted {{ reminder.lastContacted | date:'MM/dd/yy' }}
+        Contacted {{ contact.lastContactedLabel | date:'MM/dd/yy' }}
         <br>
-        Contact every {{ reminder.contactFrequency }} days
+        Contact every {{ contact.contactFrequency }} days
       </p>
     </div>
   </div>
 </div>
 
 <script src="lib/angular/angular.js"></script>
+<script src="lib/moment/moment.js"></script>
 
 <script src="app/app.js"></script>
 </body>
