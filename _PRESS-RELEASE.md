@@ -1,44 +1,39 @@
-# Project Name #
+# Get In Touch #
 
-<!-- 
-> This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
-
-There is an approach called "working backwards" that is widely used at Amazon. They work backwards from the customer, rather than starting with an idea for a product and trying to bolt customers onto it. While working backwards can be applied to any specific product decision, using this approach is especially important when developing new products or features.
-
-For new initiatives a product manager typically starts by writing an internal press release announcing the finished product. The target audience for the press release is the new/updated product's customers, which can be retail customers or internal users of a tool or technology. Internal press releases are centered around the customer problem, how current solutions (internal or external) fail, and how the new product will blow away existing solutions.
-
-If the benefits listed don't sound very interesting or exciting to customers, then perhaps they're not (and shouldn't be built). Instead, the product manager should keep iterating on the press release until they've come up with benefits that actually sound like benefits. Iterating on a press release is a lot less expensive than iterating on the product itself (and quicker!).
-
-If the press release is more than a page and a half, it is probably too long. Keep it simple. 3-4 sentences for most paragraphs. Cut out the fat. Don't make it into a spec. You can accompany the press release with a FAQ that answers all of the other business or execution questions so the press release can stay focused on what the customer gets. My rule of thumb is that if the press release is hard to write, then the product is probably going to suck. Keep working at it until the outline for each paragraph flows. 
-
-Oh, and I also like to write press-releases in what I call "Oprah-speak" for mainstream consumer products. Imagine you're sitting on Oprah's couch and have just explained the product to her, and then you listen as she explains it to her audience. That's "Oprah-speak", not "Geek-speak".
-
-Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
- -->
- 
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
-
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+## Target Market ##
+Professionals who want to stay in touch with their professional contacts (and friends) can use Get In Touch to remember
+when to reach out to those contacts.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+Get In Touch helps you remember when to reach out to your contacts. Suppose you want to stay in contact with
+Amie, who works at a company you might want to work at in the future; several former work colleagues; and some close
+family members who live across the country. Get In Touch can remind you to follow up with each of them on a regular
+basis. You can even use Get In Touch to save "stories" - updates about your life - and you can use those stories to
+help you write messages when you follow up with your contacts. For example, you may want to contact Amie at least once
+every six months. Get In Touch reminds you when it's time to contact her again. As you write a message to her, you
+review your saved stories to help remind you of things you might want to tell Amie about. You also review notes you made
+about Amie the last time you caught up, and you include a couple of questions about how her projects are going. In 18
+months, when you are ready to apply for a job at Amie's company, she will be happy to recommend you.
 
 ## Problem ##
-  > Describe the problem your product solves.
+There isn't an easy way to keep track of your contacts, and how often you should contact each of them.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+Get In Touch allows you to save contacts, and reminds you when you should follow up with them again. GIT also makes it
+easy to save notes about each contact, and save "stories" about your life to include when you follow up with them.
 
-## Quote from You ##
-  > A quote from a spokesperson in your company.
+## In Our Founder's Words ##
+"I only remembered to write this promotional quote because Get In Touch reminded me that I needed to do it!"
+- Nico Barry, founder
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+Go to http://GetInTou.ch to create an account. You can immediately start adding contacts yourself, or have GIT suggest
+contacts based on your Gmail, Facebook, or LinkedIn accounts.
 
-## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+## Testimonials ##
+"I never used to get around to staying in contact with most of my friends from high school and college. I felt like
+a lot of them knew what was going on with each other, but I wasn't really in the loop. Now Get In Touch helps me
+remember when to reach out to friends on Facebook. It's like having my old friend circle back again!"
 
-## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+## Get In Touch Now! ##
+Visit http://GetInTou.ch to get started!
