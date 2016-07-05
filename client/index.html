@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='getintouch'>
+<head>
+  <meta charset="utf-8" />
+  <title>Get In Touch</title>
+</head>
+<body>
+<h1>Get In Touch</h1>
+
+<div id="main" ng-controller="RemindersController">
+  <div id="reminders">
+    <div class="reminder" ng-repeat="reminder in reminders">
+      {{ reminder }}
+    </div>
+  </div>
+</div>
+
+<script src="lib/angular/angular.js"></script>
+
+<script src="app/app.js"></script>
+</body>
+</html>
