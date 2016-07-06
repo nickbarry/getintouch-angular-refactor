@@ -3,10 +3,10 @@
 
 ## Basic Requirements
 - Use iterative development (go straight to something that demos your idea)
+    - Deploy to Heroku.
     - Add a navbar:
         - Create the ability to add new contacts
         - See future contacts due (and maybe other filters)
-    - Deploy to Heroku.
 - Prepare for pitch @ demo on Tuesday
 - Work on more features:
     - Create ability to save notes for each contact
@@ -16,7 +16,6 @@
     - Ability to filter contacts by tag/keyword
     - Make sure the client/server are sending data between each other.
     - Connect to a database
-
 
 ## Extra Credit
 
