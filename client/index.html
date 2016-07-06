@@ -21,10 +21,24 @@
         Contact every {{ contact.contactFrequency }} days
         <br>
       </p>
-      <label for="contact--notes-chk-{{ contact.id }}">Notes...</label>
+      <label for="contact--notes-chk-{{ contact.id }}">Message {{ contact.name }}</label>
       <input type="checkbox" id="contact--notes-chk-{{ contact.id }}">
-      <div class="contact--notes">
-        <textarea ng-model="contact.notes" name="contact--notes--edit" class="contact--notes--edit" rows="10">{{ contact.notes }}</textarea>
+      <div class="contact--notes-and-compose">
+        <div class="contact--notes">
+          <textarea ng-model="contact.notes" name="contact--notes--edit" class="contact--notes--edit" rows="10">{{ contact.notes }}</textarea>
+        </div>
+        <div class="contact--compose">
+          <textarea name="message--compose" id="message--compose" rows="10"></textarea>
+          <select name="message--stories" id="message--stories">
+            <option value="null">Select a story to include...</option>
+            <option
+                ng-repeat="story in stories | filter:contactStoryMatcher(contact)"
+                ng-click="pasteStory(story)"
+                value="{{ story.title }}">
+              {{ story.title }}
+            </option>
+          </select>
+        </div>
       </div>
     </div>
     <div id="contact--btn-add-new">

@@ -32,12 +32,12 @@ input[type=checkbox] {
 }
 
 /* Default State */
-.contact--notes{
+.contact--notes-and-compose{
   display: none;
 }
 
 /* Toggled State */
-input[type=checkbox]:checked ~ .contact--notes {
+input[type=checkbox]:checked ~ .contact--notes-and-compose{
   display: block;
 }
 

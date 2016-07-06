@@ -29,4 +29,15 @@ angular.module('getintouch', [
     $scope.newContact = Object.assign({}, newContactDefaults);
     $scope.adding = false;
   };
+
+  $scope.stories = Contacts.getStories();
+  //$scope.
+  $scope.contactStoryMatcher = function(contact){
+    return function(story){
+      return !contact.storiesDone.includes(story.id);
+    };
+  };
+  $scope.pasteStory = function(story){
+
+  };
 });
