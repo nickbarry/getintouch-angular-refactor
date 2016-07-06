@@ -2,6 +2,12 @@ angular.module('getintouch', [
   'getintouch.services'
 ])
 .controller('ContactsController', function($scope, Contacts){
+  $scope.dateCutoff = {
+    today: new moment().hours(0).minutes(0).seconds(0).milliseconds(0),
+    week: new moment().hours(0).minutes(0).seconds(0).milliseconds(0).add(7,'days'),
+    mode: 'today'
+  };
+
   $scope.contacts = Contacts.getContacts();
 
   $scope.markAsContacted = function(contact){
@@ -9,8 +15,7 @@ angular.module('getintouch', [
   };
 
   $scope.isOverdue = function(contact){
-    var today = new moment().hours(0).minutes(0).seconds(0).milliseconds(0);
-    return contact.contactNext.isSameOrBefore(today);
+    return contact.contactNext.isSameOrBefore( $scope.dateCutoff[$scope.dateCutoff.mode] );
   };
 
   var newContactDefaults = {

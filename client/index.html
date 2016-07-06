@@ -5,27 +5,30 @@
   <title>Get In Touch</title>
   <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
-<body>
+<body ng-controller="ContactsController">
 
 <div id="header">
   <div class="title">
     <h1 class="title--header">Get In Touch</h1>
+    <ul>
+      <li><a href="#" ng-click="dateCutoff.mode='today'">Today's contacts</a></li>
+      <li><a href="#" ng-click="dateCutoff.mode='week'">Due in one week</a></li>
+    </ul>
   </div>
 </div>
-<div id="main" ng-controller="ContactsController">
+<div id="main">
   <div id="contacts--list">
     <div class="contact--card" ng-repeat="contact in contacts | filter:isOverdue">
       <h3>
         {{ contact.name }}
         <button class="contact--btn-contacted" ng-click="markAsContacted(contact)">Just contacted!</button>
       </h3>
-      <p>
-        Contacted {{ contact.lastContactedLabel | date:'MM/dd/yy' }}
-        <br>
+      <p class="contact--stats">
+        Contacted {{ contact.lastContactedLabel | date:'MM/dd/yy' }}.
         Contact every {{ contact.contactFrequency }} days
         <br>
       </p>
-      <label for="contact--notes-chk-{{ contact.id }}">Message {{ contact.name }}</label>
+      <label class="contact--card--compose-label" for="contact--notes-chk-{{ contact.id }}">Message {{ contact.name }}...</label>
       <input type="checkbox" id="contact--notes-chk-{{ contact.id }}">
       <div class="contact--notes-and-compose">
         <div class="contact--notes">
