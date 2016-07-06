@@ -6,8 +6,6 @@
         - See future contacts due (and maybe other filters)
 - Prepare for pitch @ demo on Tuesday
 - Work on more features:
-    - Create ability to save notes for each contact
-    - Ability to save user stories
     - Connect the server to Facebook, Gmail, and LinkedIn third party APIs.
     - Build the ability to save user "stories" (updates).
     - Ability to filter contacts by tag/keyword

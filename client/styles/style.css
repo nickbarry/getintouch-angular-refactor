@@ -5,6 +5,7 @@
 
 .contact--card{
   border-bottom: solid #ccc 1px;
+  padding-bottom: 10px;
 }
 
 .contact--btn-contacted{
@@ -28,8 +29,6 @@ input[type=checkbox] {
   position: absolute;
   top: -9999px;
   left: -9999px;
-  /* For mobile, it's typically better to position checkbox on top of clickable
-     area and turn opacity to 0 instead. */
 }
 
 /* Default State */
@@ -40,4 +39,8 @@ input[type=checkbox] {
 /* Toggled State */
 input[type=checkbox]:checked ~ .contact--notes {
   display: block;
+}
+
+textarea{
+  width: 795px;
 }

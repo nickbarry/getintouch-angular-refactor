@@ -23,7 +23,9 @@
       </p>
       <label for="contact--notes-chk-{{ contact.id }}">Notes...</label>
       <input type="checkbox" id="contact--notes-chk-{{ contact.id }}">
-      <div class="contact--notes">{{ contact.notes }}</div>
+      <div class="contact--notes">
+        <textarea ng-model="contact.notes" name="contact--notes--edit" class="contact--notes--edit" rows="10">{{ contact.notes }}</textarea>
+      </div>
     </div>
     <div id="contact--btn-add-new">
       <button ng-hide="adding" ng-click="adding = true">Add a new contact</button>
