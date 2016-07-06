@@ -3,7 +3,7 @@
 
 ## Basic Requirements
 - Use iterative development (go straight to something that demos your idea)
-    - Deploy to Heroku.
+    - Refactor angular into modules and services
     - Add a navbar:
         - Create the ability to add new contacts
         - See future contacts due (and maybe other filters)
