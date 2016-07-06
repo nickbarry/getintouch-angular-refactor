@@ -17,7 +17,8 @@ angular.module('getintouch.services', [])
       lastContactedLabel: new moment("2016-06-30").format('MMM D, YYYY'),
       contactFrequency: 14,
       contactNext: new moment("2016-07-13"),
-      notes: 'lorem ipsum',
+      notes: "Python coder. Started the High Impact dodgeball league. Works a lot on improving/automating people's " +
+        "workflows, e.g. deployment workflows.",
       storiesDone: [3,4],
       message: ''
     },{
@@ -27,7 +28,8 @@ angular.module('getintouch.services', [])
       lastContactedLabel: new moment("2015-02-20").format('MMM D, YYYY'),
       contactFrequency: 180,
       contactNext: new moment("2015-08-20"),
-      notes: 'lorem ipsum',
+      notes: 'Recently (1/2015) started working at a cool company doing social media work for nonprofits.' +
+        '\n\nInterned for me at Davis Dollars',
       storiesDone: [],
       message: ''
     },{
@@ -37,7 +39,7 @@ angular.module('getintouch.services', [])
       lastContactedLabel: new moment("2015-01-30").format('MMM D, YYYY'),
       contactFrequency: 365,
       contactNext: new moment("2016-01-30"),
-      notes: 'lorem ipsum',
+      notes: "Met through Cassie Winter, Nick's cousin. Nick started Code Combat, and now it mostly runs itself.",
       storiesDone: [],
       message: ''
     }];
@@ -47,8 +49,8 @@ angular.module('getintouch.services', [])
       title: "MVP project",
       topic: 'MKS-detail',
       text: "I just spent a huge amount of time working on the 'Minimum Viable Product' project. It's the first project " +
-      "we have worked on alone, and we had less than 24 hours to put together 'something that works'.\n\nI decided to " +
-      "focus on a contacts reminder app that I've been thinking about for the past few months. ..."
+        "we have worked on alone, and we had less than 24 hours to put together 'something that works'.\n\nI decided to " +
+        "focus on a contacts reminder app that I've been thinking about for the past few months. ..."
     }, {
       id: 4,
       title: "Started MKS",
@@ -65,8 +67,8 @@ angular.module('getintouch.services', [])
       title: "Married!",
       topic: 'Miscellaneous',
       text: "We got MARRIED! OK, I'm excited, but things are pretty much the same as they were before.\n\nThe only change" +
-      " is that I'm at MakerSquare the whole time, so Elyse keeps joking to people that all the myths are correct, and" +
-      " she never sees me now that we're married."
+        " is that I'm at MakerSquare the whole time, so Elyse keeps joking to people that all the myths are correct, and" +
+        " she never sees me now that we're married."
     }, {
       id: 5,
       title: "Angular rocks",

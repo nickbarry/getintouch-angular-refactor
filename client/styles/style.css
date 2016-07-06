@@ -31,11 +31,7 @@ body{
   display: inline-block;
   position: relative;
   top: -3px;
-  /*bottom: */
-  /*height: 1em*/
-  /*float: right;*/
   padding-right: 15px;
-  /*margin-bottom: 5px;*/
 }
 
 #main{
@@ -68,10 +64,6 @@ body{
 #contact--btn-add-new{
   padding: 10px 0;
 }
-
-/*#contact--btn-add-new{*/
-  /*text-height: 2em;*/
-/*}*/
 
 input{
   padding: 5px 0;

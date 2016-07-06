@@ -26,7 +26,6 @@
       <p class="contact--stats">
         Contacted {{ contact.lastContactedLabel | date:'MM/dd/yy' }}.
         Contact every {{ contact.contactFrequency }} days
-        <br>
       </p>
       <label class="contact--card--compose-label" for="contact--notes-chk-{{ contact.id }}">Message {{ contact.name }}...</label>
       <input type="checkbox" id="contact--notes-chk-{{ contact.id }}">
