@@ -1,10 +1,8 @@
-
 # MVP (Solo) Project
 
 ## Basic Requirements
 - Use iterative development (go straight to something that demos your idea)
     - Add a navbar:
-        - Create the ability to add new contacts
         - See future contacts due (and maybe other filters)
 - Prepare for pitch @ demo on Tuesday
 - Work on more features:
