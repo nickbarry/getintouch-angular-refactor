@@ -2,11 +2,13 @@
 
 ## Basic Requirements
 - Use iterative development (go straight to something that demos your idea)
-    - Add a navbar:
-        - See future contacts due (and maybe other filters)
 - Prepare for pitch @ demo on Tuesday
+    - Make it pretty
+        - Add more contacts
     - Build the ability to save user "stories" (updates).
         - Ability to create new stories
+    - Add a navbar:
+        - See future contacts due (and maybe other filters)
 - Work on more features:
     - Connect the server to Facebook, Gmail, and LinkedIn third party APIs.
     - Ability to filter contacts by tag/keyword

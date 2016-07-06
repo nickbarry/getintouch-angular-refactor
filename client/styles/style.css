@@ -1,6 +1,33 @@
+body{
+  background-color: #eee;
+}
+
+#header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1bc5e7;
+  z-index: 10;
+}
+
+#header .title{
+  width: 800px;
+  margin: 4px auto;
+}
+
+.title--header{
+  display: inline-block;
+  margin: 0;
+}
+
 #main{
+  background-color: white;
+  position: relative;
   width: 800px;
   margin: 0 auto;
+  padding: 5vh 20px 0 20px;
+  min-height: 95vh;
 }
 
 .contact--card{

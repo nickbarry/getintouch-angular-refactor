@@ -7,8 +7,12 @@
 </head>
 <body>
 
+<div id="header">
+  <div class="title">
+    <h1 class="title--header">Get In Touch</h1>
+  </div>
+</div>
 <div id="main" ng-controller="ContactsController">
-  <h1>Get In Touch</h1>
   <div id="contacts--list">
     <div class="contact--card" ng-repeat="contact in contacts | filter:isOverdue">
       <h3>
