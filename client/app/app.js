@@ -37,7 +37,8 @@ angular.module('getintouch', [
     };
   };
   $scope.pasteStory = function(contact, story){
-    contact.message += '\n\n' + story.text;
+    var padding = contact.message ? '\n\n' : '';
+    contact.message += padding + story.text;
     contact.storiesDone.push(story.id);
   };
 });

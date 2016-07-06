@@ -31,7 +31,7 @@
         <div class="contact--compose">
           <h4>Compose a message</h4>
           <select ng-model="selectedStory"
-                  ng-options="story.title for story in stories.filter(contactStoryMatcher(contact))"
+                  ng-options="story.title group by story.topic for story in stories.filter(contactStoryMatcher(contact))"
                   ng-change="pasteStory(contact,selectedStory)"
                   name="message--stories" id="message--stories">
             <option value="">-- choose a story to include --</option>
