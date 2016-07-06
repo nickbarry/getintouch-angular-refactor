@@ -8,7 +8,8 @@ angular.module('getintouch.services', [])
       contactFrequency: 1,
       contactNext: new moment("2016-07-02"),
       notes: 'Talk to her about my cool MVP.\n\nMarried on 5/14/16.\nBirthday 6/14/88',
-      storiesDone: [2,3]
+      storiesDone: [2,3],
+      message: ''
     },{
       id: 2,
       name: 'Chris Brenton',
@@ -17,7 +18,8 @@ angular.module('getintouch.services', [])
       contactFrequency: 14,
       contactNext: new moment("2016-07-13"),
       notes: 'lorem ipsum',
-      storiesDone: [3]
+      storiesDone: [3],
+      message: ''
     },{
       id: 3,
       name: 'Catrina Fuentes',
@@ -26,7 +28,8 @@ angular.module('getintouch.services', [])
       contactFrequency: 180,
       contactNext: new moment("2015-08-20"),
       notes: 'lorem ipsum',
-      storiesDone: []
+      storiesDone: [],
+      message: ''
     },{
       id: 4,
       name: 'Nick Winter',
@@ -35,7 +38,8 @@ angular.module('getintouch.services', [])
       contactFrequency: 365,
       contactNext: new moment("2016-01-30"),
       notes: 'lorem ipsum',
-      storiesDone: []
+      storiesDone: [],
+      message: ''
     }];
 
     var stories = [{

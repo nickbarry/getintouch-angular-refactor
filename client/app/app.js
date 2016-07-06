@@ -31,13 +31,12 @@ angular.module('getintouch', [
   };
 
   $scope.stories = Contacts.getStories();
-  //$scope.
   $scope.contactStoryMatcher = function(contact){
     return function(story){
       return !contact.storiesDone.includes(story.id);
     };
   };
-  $scope.pasteStory = function(story){
-
+  $scope.pasteStory = function(contact, story){
+    contact.message += story.text;
   };
 });

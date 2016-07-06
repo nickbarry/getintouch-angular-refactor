@@ -25,19 +25,18 @@
       <input type="checkbox" id="contact--notes-chk-{{ contact.id }}">
       <div class="contact--notes-and-compose">
         <div class="contact--notes">
+          <h4>Notes</h4>
           <textarea ng-model="contact.notes" name="contact--notes--edit" class="contact--notes--edit" rows="10">{{ contact.notes }}</textarea>
         </div>
         <div class="contact--compose">
-          <textarea name="message--compose" id="message--compose" rows="10"></textarea>
-          <select name="message--stories" id="message--stories">
-            <option value="null">Select a story to include...</option>
-            <option
-                ng-repeat="story in stories | filter:contactStoryMatcher(contact)"
-                ng-click="pasteStory(story)"
-                value="{{ story.title }}">
-              {{ story.title }}
-            </option>
+          <h4>Compose a message</h4>
+          <select ng-model="selectedStory"
+                  ng-options="story.title for story in stories.filter(contactStoryMatcher(contact))"
+                  ng-change="pasteStory(contact,selectedStory)"
+                  name="message--stories" id="message--stories">
+            <option value="">-- choose a story to include --</option>
           </select>
+          <textarea ng-model="contact.message" name="message--compose" id="message--compose" rows="10"></textarea>
         </div>
       </div>
     </div>
