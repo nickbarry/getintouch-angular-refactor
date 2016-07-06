@@ -21,6 +21,23 @@ body{
   margin: 0;
 }
 
+.title ul{
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+}
+
+.title li{
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  /*bottom: */
+  /*height: 1em*/
+  /*float: right;*/
+  padding-right: 15px;
+  /*margin-bottom: 5px;*/
+}
+
 #main{
   background-color: white;
   position: relative;
@@ -36,6 +53,15 @@ body{
 }
 
 .contact--btn-contacted{
+  float: right;
+}
+
+.contact--stats{
+  color: #999;
+  display: inline-block;
+}
+
+.contact--card--compose-label{
   float: right;
 }
 
