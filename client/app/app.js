@@ -46,4 +46,7 @@ angular.module('getintouch', [
     contact.message += padding + story.text;
     contact.storiesDone.push(story.id);
   };
+
+  // Creating new stories
+
 });

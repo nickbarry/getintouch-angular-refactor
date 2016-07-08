@@ -4,6 +4,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "test": "mocha test/*.js",
     "postinstall": "./node_modules/bower/bin/bower install"
   },
   "engines": {
@@ -16,6 +17,8 @@
     "moment": "^2.14.1"
   },
   "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
     "nodemon": "*"
   }
 }
