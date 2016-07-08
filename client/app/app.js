@@ -1,7 +1,7 @@
 angular.module('getintouch', [
   'getintouch.services'
 ])
-.controller('ContactsController', function($scope, Contacts){
+.controller('ContactsController', function($scope, Contacts, Stories){
   $scope.dateCutoff = {
     today: new moment().hours(0).minutes(0).seconds(0).milliseconds(0),
     week: new moment().hours(0).minutes(0).seconds(0).milliseconds(0).add(7,'days'),
@@ -25,22 +25,25 @@ angular.module('getintouch', [
   };
   $scope.newContact = Object.assign({},newContactDefaults);
   $scope.adding = false;
-  $scope.cancelNew = function(){
+  $scope.cancelNewContact = function(){
     $scope.adding = false;
     Object.assign($scope.newContact,newContactDefaults);
   };
-  $scope.createNew = function(){
+  $scope.createNewContact = function(){
     Contacts.newContact($scope.newContact);
     $scope.newContact = Object.assign({}, newContactDefaults);
     $scope.adding = false;
   };
 
-  $scope.stories = Contacts.getStories();
+  // Stories ------------------
+  $scope.stories = Stories.getStories();
+
   $scope.contactStoryMatcher = function(contact){
     return function(story){
       return !contact.storiesDone.includes(story.id);
     };
   };
+
   $scope.pasteStory = function(contact, story){
     var padding = contact.message ? '\n\n' : '';
     contact.message += padding + story.text;
@@ -48,5 +51,6 @@ angular.module('getintouch', [
   };
 
   // Creating new stories
+
 
 });
