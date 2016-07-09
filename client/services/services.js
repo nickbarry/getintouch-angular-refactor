@@ -55,8 +55,7 @@ angular.module('getintouch.services', [])
 
     var newContact = function(newC){
       if(newC.name === ''){
-        // TODO: Create some error conditions
-        return;
+        return; // Do nothing; no real user data is lost
       }
 
       newC.contactFrequency = newC.contactFrequency || '180';
@@ -78,6 +77,7 @@ angular.module('getintouch.services', [])
     return {getContacts, newContact, markAsNew};
   })
   .factory('Stories', function(){
+    // Dummy stories
     var stories = [
       {
         id: 1,

@@ -5,7 +5,7 @@
   <title>Get In Touch</title>
   <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
-<body ng-controller="ContactsController">
+<body ng-controller="MainController">
 
 <div id="header">
   <div class="title">
@@ -32,7 +32,10 @@
       <div class="contact--notes-and-compose">
         <div class="contact--notes">
           <h4>Notes</h4>
-          <textarea ng-model="contact.notes" name="contact--notes--edit" class="contact--notes--edit" rows="10">{{ contact.notes }}</textarea>
+          <textarea ng-model="contact.notes" ng-mouseup="captureSelectedText()"
+                    name="contact--notes--edit" class="contact--notes--edit" rows="10">
+            {{ contact.notes }}
+          </textarea>
         </div>
         <div class="contact--compose">
           <h4>Compose a message</h4>
