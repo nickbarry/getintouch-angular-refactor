@@ -12,12 +12,9 @@ describe('MainController', function(){
     controller = $controller('MainController', { $scope: $scope });
   }));
 
-  describe('$scope.dateCutoff', function () {
-    it('should be an object on the $scope with properties today, week, and mode', function () {
-      expect($scope.dateCutoff).to.be.an('object');
-      expect($scope.dateCutoff.today).not.to.be.an('undefined');
-      expect($scope.dateCutoff.week).not.to.be.an('undefined');
-      expect($scope.dateCutoff.mode).not.to.be.an('undefined');
+  describe('$scope.dateCutoffMode', function () {
+    it('should be initially be set to "today"', function () {
+      expect($scope.dateCutoffMode).to.equal('today');
     });
   });
 
@@ -39,21 +36,19 @@ describe('MainController', function(){
     });
 
     it('should return a boolean representing whether the provided contact is overdue for contact', function(){
-      const overdueContact = {
+      const contact = {
         contactNext: moment(new Date()).subtract(2,'days')
       };
-      const notOverdueContact = {
-        contactNext: moment(new Date()).add(2,'days')
-      };
+      expect($scope.isOverdue(contact)).to.be.true;
 
-      expect($scope.isOverdue(overdueContact)).to.be.true;
-      expect($scope.isOverdue(notOverdueContact)).to.be.false;
+      contact.contactNext.add(4,'days');
+      expect($scope.isOverdue(contact)).to.be.false;
     });
   });
 
   //describe('TEMPLATE_TEMPLATE_TEMPLATE', function(){
   //  it('TEMPLATE_TEMPLATE_TEMPLATE', function(){
-  //
+  //    expect();
   //  })
   //});
 });
