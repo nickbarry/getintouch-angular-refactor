@@ -54,10 +54,6 @@ angular.module('getintouch.services', [])
     };
 
     var newContact = function(newC){
-      if(newC.name === ''){
-        return; // Do nothing; no real user data is lost
-      }
-
       newC.contactFrequency = newC.contactFrequency || '180';
       newC.lastContacted = newC.lastContacted ?
         new moment(newC.lastContacted) :

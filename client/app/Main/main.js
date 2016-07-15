@@ -1,34 +1,38 @@
 angular.module('getintouch.main', [])
   .controller('MainController', function($scope, Contacts, Stories){
-    $scope.dateCutoff = {
+    $scope.dateCutoffMode = 'today';
+    const dateCutoffs = {
       today: new moment().hours(0).minutes(0).seconds(0).milliseconds(0),
-      week: new moment().hours(0).minutes(0).seconds(0).milliseconds(0).add(7,'days'),
-      mode: 'today'
+      week: new moment().hours(0).minutes(0).seconds(0).milliseconds(0).add(7,'days')
     };
 
     $scope.contacts = Contacts.getContacts();
 
     $scope.markAsContacted = function(contact){
-      Contacts.markAsNew(contact);
+      Contacts.markAsContacted(contact);
     };
 
     $scope.isOverdue = function(contact){
-      return contact.contactNext.isSameOrBefore( $scope.dateCutoff[$scope.dateCutoff.mode] );
+      return contact.contactNext.isSameOrBefore( dateCutoffs[$scope.dateCutoffMode] );
     };
 
-    var newContactDefaults = {
+    const newContactDefaults = {
       name: '',
       contactFrequency: '',
       lastContacted: ''
     };
     $scope.newContact = Object.assign({},newContactDefaults);
-    $scope.adding = false;
+
+    $scope.addingContact = false;
     $scope.cancelNewContact = function(){
-      $scope.adding = false;
+      $scope.addingContact = false;
       Object.assign($scope.newContact,newContactDefaults);
     };
     $scope.createNewContact = function(){
-      Contacts.newContact($scope.newContact);
+      if($scope.newContact.name !== ''){
+        //console.log('Contacts.newContact: ', Contacts.newContact);
+        Contacts.newContact(Object.assign({},$scope.newContact));
+      }
       $scope.cancelNewContact();
     };
 

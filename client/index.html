@@ -50,15 +50,18 @@
       </div>
     </div>
     <div id="contact--btn-add-new">
-      <button ng-hide="adding" ng-click="adding = true">Add a new contact</button>
-      <div id="contact--form-add-new" ng-show="adding">
+      <button ng-hide="addingContact" ng-click="addingContact = true">Add a new contact</button>
+      <div id="contact--form-add-new" ng-show="addingContact">
         <label for="contact--new-name">I want to contact </label>
         <input id="contact--new-name" name="contact--new-name" type="text" placeholder="Name" ng-model="newContact.name">
+
         <label for="contact--new-frequency"> every </label>
         <input id="contact--new-frequency" name="contact--new-frequency" type="text" placeholder="days" ng-model="newContact.contactFrequency">
+
         <label for="contact--new-last-contacted"> days. I last contacted them (optional) on </label>
         <input id="contact--new-last-contacted" name="contact--new-last-contacted" type="text" placeholder="m/d/y" ng-model="newContact.lastContacted">
         <label for="contact--new-last-contacted">.</label>
+
         <br>
         <button ng-click="cancelNewContact()">Cancel</button> <button ng-click="createNewContact()">Save</button>
       </div>
@@ -70,6 +73,7 @@
 <script src="lib/moment/moment.js"></script>
 
 <script src="app/services/services.js"></script>
+<script src="app/main/main.js"></script>
 <script src="app/app.js"></script>
 </body>
 </html>
