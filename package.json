@@ -4,7 +4,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "mocha test/*.js",
+    "test": "karma start",
     "postinstall": "./node_modules/bower/bin/bower install"
   },
   "engines": {

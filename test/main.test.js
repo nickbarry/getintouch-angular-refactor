@@ -21,7 +21,7 @@ describe('MainController', function(){
   describe('$scope.contacts', function() {
     it('should be an array', function(){
       expect($scope.contacts).to.be.an('array');
-    })
+    });
   });
 
   describe('$scope.markAsContacted', function(){
@@ -46,9 +46,66 @@ describe('MainController', function(){
     });
   });
 
+  describe('$scope.newContact', function(){
+    it('should be an object with empty strings for its properties', function(){
+      for(let key in $scope.newContact){
+        if ($scope.newContact.hasOwnProperty(key)) {
+          expect($scope.newContact[key]).to.equal('');
+        }
+      }
+    });
+  });
+
+  describe('$scope.addingContact', function () {
+    it('should be a boolean that is initially set to false', function () {
+      expect($scope.addingContact).to.be.false;
+    });
+  });
+
+  describe('$scope.cancelNewContact', function(){
+    it('should set $scope.addingContact to false', function(){
+      $scope.cancelNewContact();
+      expect($scope.addingContact).to.be.false;
+    });
+  });
+
+  describe('$scope.createNewContact', function(){
+    it('should add one new contact to $scope.contacts', function(){
+      const oldContactsCount = $scope.contacts.length;
+      $scope.newContact = { name: 'Testy McTestorson' };
+      $scope.createNewContact();
+      expect($scope.contacts.length).to.equal(oldContactsCount + 1);
+    });
+
+    it('should set all the properties on $scope.newContact back to empty strings after adding the new contact', function(){
+      for(let key in $scope.newContact){
+        if ($scope.newContact.hasOwnProperty(key)) {
+          expect($scope.newContact[key]).to.equal('');
+        }
+      }
+    });
+  });
+
+  describe('$scope.cancelNewContact', function(){
+    it('should not add any new contacts to $scope.contacts', function(){
+      const oldContactsCount = $scope.contacts.length;
+      $scope.newContact = { name: 'Testy McTestorson' };
+      $scope.cancelNewContact();
+      expect($scope.contacts.length).to.equal(oldContactsCount);
+    });
+
+    it('should set all the properties on $scope.newContact back to empty strings', function(){
+      for(let key in $scope.newContact){
+        if ($scope.newContact.hasOwnProperty(key)) {
+          expect($scope.newContact[key]).to.equal('');
+        }
+      }
+    });
+  });
+
   //describe('TEMPLATE_TEMPLATE_TEMPLATE', function(){
   //  it('TEMPLATE_TEMPLATE_TEMPLATE', function(){
   //    expect();
-  //  })
+  //  });
   //});
 });
