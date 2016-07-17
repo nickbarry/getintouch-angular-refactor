@@ -1,5 +1,5 @@
-angular.module('getintouch.main', [])
-  .controller('MainController', function($scope, Contacts, Stories){
+angular.module('getintouch.inbox', [])
+  .controller('inboxController', function($scope, Contacts, Stories){
     $scope.dateCutoffMode = 'today';
     const dateCutoffs = {
       today: new moment().hours(0).minutes(0).seconds(0).milliseconds(0),

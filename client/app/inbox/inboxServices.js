@@ -1,4 +1,4 @@
-angular.module('getintouch.services', [])
+angular.module('inbox.services', [])
   .factory('Contacts', function(){
     var contacts = [
       {

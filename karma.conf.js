@@ -19,9 +19,7 @@ module.exports = function(config) {
       './client/lib/angular-mocks/angular-mocks.js',
       './client/lib/moment/moment.js',
       './client/app/*.js',
-      './client/app/main/*.js',
-      './client/app/services/*.js',
-      './test/*.js'
+      './client/app/inbox/*.js',
     ],
 
 
