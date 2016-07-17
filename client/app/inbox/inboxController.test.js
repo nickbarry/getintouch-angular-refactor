@@ -9,7 +9,7 @@ describe('MainController', function(){
     $controller = _$controller_;
 
     $scope = {};
-    controller = $controller('MainController', { $scope: $scope });
+    controller = $controller('InboxController', { $scope: $scope });
   }));
 
   describe('$scope.dateCutoffMode', function () {
@@ -67,6 +67,20 @@ describe('MainController', function(){
       $scope.cancelNewContact();
       expect($scope.addingContact).to.be.false;
     });
+
+    it('should reset $scope.newContact\'s properties to emtpy strings', function() {
+      $scope.newContact.name = 'Harry James Potter-Evans-Verres';
+      $scope.newContact.contactFrequency = '7';
+      $scope.newContact.lastContacted = '7/16/16';
+
+      $scope.cancelNewContact();
+
+      for(let key in $scope.newContact){
+        if ($scope.newContact.hasOwnProperty(key)) {
+          expect($scope.newContact[key]).to.equal('');
+        }
+      }
+    });
   });
 
   describe('$scope.createNewContact', function(){
@@ -100,6 +114,59 @@ describe('MainController', function(){
           expect($scope.newContact[key]).to.equal('');
         }
       }
+    });
+  });
+
+  describe('$scope.stories', function(){
+    it('should be an array', function(){
+      expect($scope.stories).to.be.an('array');
+    });
+  });
+
+  describe('$scope.contactStoryMatcher', function(){
+    it('should be a function that returns a function', function(){
+      expect($scope.contactStoryMatcher()).to.be.a('function');
+    });
+
+    it('should return a function that reports whether a contact hasn\'t already heard a story', function() {
+      const story1 = { id: 798 };
+      const story2 = { id: 79778 };
+      const contact = { storiesDone: [798] };
+
+      expect($scope.contactStoryMatcher(contact)(story1)).to.be.false;
+      expect($scope.contactStoryMatcher(contact)(story2)).to.be.true;
+    });
+  });
+
+  describe('$scope.pasteStory', function(){
+    it('should append the story text to the contact message property', function(){
+      const story = {
+        text: 'I know it is impossible, but what if I succeed?',
+        id: 1234
+      };
+      const contact = {
+        message: 'As Nasreddin Hodja says,',
+        storiesDone: []
+      };
+
+      $scope.pasteStory(contact, story);
+
+      expect(contact.message).to.equal('As Nasreddin Hodja says,\n\nI know it is impossible, but what if I succeed?');
+    });
+
+    it('should add the story id to the contact\'s storiesDone array', function() {
+      const story = {
+        text: 'I know it is impossible, but what if I succeed?',
+        id: 1234
+      };
+      const contact = {
+        message: 'As Nasreddin Hodja says,',
+        storiesDone: []
+      };
+
+      $scope.pasteStory(contact, story);
+
+      expect(contact.storiesDone).to.deep.equal([1234]);
     });
   });
 

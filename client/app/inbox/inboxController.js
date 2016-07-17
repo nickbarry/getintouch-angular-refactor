@@ -1,5 +1,5 @@
 angular.module('getintouch.inbox', [])
-  .controller('inboxController', function($scope, Contacts, Stories){
+  .controller('InboxController', function($scope, Contacts, Stories){
     $scope.dateCutoffMode = 'today';
     const dateCutoffs = {
       today: new moment().hours(0).minutes(0).seconds(0).milliseconds(0),
@@ -30,13 +30,14 @@ angular.module('getintouch.inbox', [])
     };
     $scope.createNewContact = function(){
       if($scope.newContact.name !== ''){
-        //console.log('Contacts.newContact: ', Contacts.newContact);
         Contacts.newContact(Object.assign({},$scope.newContact));
       }
+
       $scope.cancelNewContact();
     };
 
     // Stories ------------------
+    $scope.stories = [];
     $scope.stories = Stories.getStories();
 
     $scope.contactStoryMatcher = function(contact){

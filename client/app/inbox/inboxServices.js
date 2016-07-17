@@ -60,6 +60,7 @@ angular.module('inbox.services', [])
         new moment().hours(0).minutes(0).seconds(0).milliseconds(0).subtract(+newC.contactFrequency,'days');
       newC.lastContactedLabel = newC.lastContacted.format('MMM D, YYYY');
       newC.contactNext = newC.lastContacted.add(+newC.contactFrequency,'days');
+      newC.storiesDone = [];
 
       contacts.push(newC);
     };
